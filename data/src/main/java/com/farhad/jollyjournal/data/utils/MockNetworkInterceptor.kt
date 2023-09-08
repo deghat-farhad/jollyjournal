@@ -1,4 +1,4 @@
-package com.farhad.jollyjournal.data
+package com.farhad.jollyjournal.data.utils
 
 import okhttp3.Interceptor
 import okhttp3.MediaType.Companion.toMediaType

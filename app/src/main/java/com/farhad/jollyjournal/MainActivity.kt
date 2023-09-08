@@ -10,19 +10,16 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.farhad.jollyjournal.data.DataRepository
+import com.farhad.jollyjournal.data.repository.NewsRepository
 import com.farhad.jollyjournal.ui.theme.JollyJournalTheme
-import dagger.hilt.EntryPoint
-import dagger.hilt.InstallIn
 import dagger.hilt.android.AndroidEntryPoint
-import dagger.hilt.components.SingletonComponent
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     @Inject
-    lateinit var dataRepository: DataRepository
+    lateinit var newsRepository: NewsRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,7 +34,7 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-        dataRepository.act()
+        newsRepository.act()
     }
 }
 
