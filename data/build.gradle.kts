@@ -2,6 +2,7 @@ plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
     id("dagger.hilt.android.plugin")
+    id("com.google.devtools.ksp")
     kotlin("plugin.serialization") version "1.8.10"
     kotlin("kapt")
 }
@@ -42,15 +43,18 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:2.44")
 
     // Retrofit, Gson, and OkHttp
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.okhttp3:okhttp:4.11.0")
     implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:1.0.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
 
 
     // OkHttp MockWebServer for mocking the server
-    implementation ("com.squareup.okhttp3:mockwebserver:4.11.0")
+    implementation("com.squareup.okhttp3:mockwebserver:4.11.0")
 
+    // Room
+    implementation("androidx.room:room-ktx:2.5.2")
+    ksp("androidx.room:room-compiler:2.5.2")
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

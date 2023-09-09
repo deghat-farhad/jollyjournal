@@ -1,15 +1,12 @@
 package com.farhad.jollyjournal.data.repository
 
-import com.farhad.jollyjournal.data.remote.Remote
-import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.runBlocking
+import News
+import com.farhad.jollyjournal.data.cache.Cache
+import com.farhad.jollyjournal.domain.NewsContract
 import javax.inject.Inject
 
-class NewsRepository @Inject constructor(private val remote: Remote) {
-
-    fun act() {
-        runBlocking {
-            println(remote.getNews().first())
-        }
+class NewsRepository @Inject constructor(private val cache: Cache) : NewsContract {
+    override suspend fun getNews(): Result<List<News>> {
+        return cache.getNews()
     }
 }

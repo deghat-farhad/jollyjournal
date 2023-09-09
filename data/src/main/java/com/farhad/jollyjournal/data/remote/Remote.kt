@@ -1,11 +1,13 @@
 package com.farhad.jollyjournal.data.remote
 
-import com.farhad.jollyjournal.data.entity.NewsEntity
-import com.farhad.jollyjournal.data.utils.safeApiCall
-import kotlinx.coroutines.flow.Flow
+import News
+import com.farhad.jollyjournal.data.mapper.NewsEntityMapper
+import javax.inject.Inject
 
-class Remote(private val serviceGenerator: ServiceGenerator) {
-    suspend fun getNews(): Flow<Result<List<NewsEntity>>> = safeApiCall {
-        serviceGenerator.newsService().getNews()
-    }
+class Remote @Inject constructor(
+    private val serviceGenerator: ServiceGenerator,
+    private val newsEntityMapper: NewsEntityMapper,
+) {
+    suspend fun getNews(): List<News> =
+        serviceGenerator.newsService().getNews().map { newsEntityMapper.toDomain(it) }
 }
