@@ -1,6 +1,6 @@
 package com.farhad.jollyjournal.data.local
 
-import News
+import com.farhad.jollyjournal.domain.model.News
 import com.farhad.jollyjournal.data.mapper.NewsRoomEntityMapper
 import javax.inject.Inject
 

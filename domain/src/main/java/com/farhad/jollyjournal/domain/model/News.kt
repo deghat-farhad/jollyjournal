@@ -1,3 +1,5 @@
+package com.farhad.jollyjournal.domain.model
+
 sealed class News {
 
     data class Article(

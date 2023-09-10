@@ -1,4 +1,4 @@
-package com.farhad.jollyjournal
+package com.farhad.jollyjournal.com.farhad.jollyjournal.view
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,17 +10,16 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.lifecycleScope
 import com.farhad.jollyjournal.data.repository.NewsRepository
+import com.farhad.jollyjournal.domain.usecase.GetNews
 import com.farhad.jollyjournal.ui.theme.JollyJournalTheme
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
-
-    @Inject
-    lateinit var newsRepository: NewsRepository
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -34,7 +33,6 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-        newsRepository.act()
     }
 }
 

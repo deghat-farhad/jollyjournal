@@ -1,7 +1,7 @@
 package com.farhad.jollyjournal.data.mapper
 
-import News
-import NewsType
+import com.farhad.jollyjournal.domain.model.News
+import com.farhad.jollyjournal.domain.model.NewsType
 import com.farhad.jollyjournal.data.entity.NewsRoomEntity
 import com.farhad.jollyjournal.data.entity.NewsRoomEntityType
 import javax.inject.Inject

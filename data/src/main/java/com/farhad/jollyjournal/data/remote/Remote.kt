@@ -1,6 +1,6 @@
 package com.farhad.jollyjournal.data.remote
 
-import News
+import com.farhad.jollyjournal.domain.model.News
 import com.farhad.jollyjournal.data.mapper.NewsEntityMapper
 import javax.inject.Inject
 
