@@ -21,7 +21,7 @@ import com.farhad.jollyjournal.R
 @Composable
 fun ErrorScreen(
     modifier: Modifier = Modifier,
-    retry: () -> Unit
+    retry: (() -> Unit)? = null
 ) {
     Column(
         modifier = modifier
@@ -39,8 +39,10 @@ fun ErrorScreen(
             text = stringResource(id = R.string.error_message),
             textAlign = TextAlign.Center
         )
-        Button(onClick = retry) {
-            Text(text = "Retry")
+        retry?.let {
+            Button(onClick = retry) {
+                Text(text = "Retry")
+            }
         }
     }
 }
