@@ -1,7 +1,10 @@
 package com.farhad.jollyjournal.com.farhad.jollyjournal.item
 
+import kotlinx.serialization.Serializable
+
 sealed class NewsItem {
 
+    @Serializable
     data class Article(
         val type: NewsItemType,
         val imageURL: String,
@@ -10,8 +13,9 @@ sealed class NewsItem {
         val articleURL: String,
         val hashtags: List<String>,
         val isPaid: Boolean
-    ) : NewsItem()
+    ) : NewsItem(), java.io.Serializable
 
+    @Serializable
     data class Video(
         val type: NewsItemType,
         val imageURL: String,
@@ -20,7 +24,7 @@ sealed class NewsItem {
         val duration: String,
         val videoURL: String,
         val isPaid: Boolean
-    ) : NewsItem()
+    ) : NewsItem(), java.io.Serializable
 }
 
 enum class NewsItemType(val typeName: String) {
