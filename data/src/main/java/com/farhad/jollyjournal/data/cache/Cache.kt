@@ -1,9 +1,9 @@
 package com.farhad.jollyjournal.data.cache
 
-import com.farhad.jollyjournal.domain.model.News
 import android.util.Log
 import com.farhad.jollyjournal.data.local.Local
 import com.farhad.jollyjournal.data.remote.Remote
+import com.farhad.jollyjournal.domain.model.News
 import javax.inject.Inject
 
 class Cache @Inject constructor(
@@ -22,7 +22,10 @@ class Cache @Inject constructor(
                 }
             } catch (e: Exception) {
                 Log.w(TAG, "API call failed, fall back to local cache: $e")
-                local.getNews()
+                val cachedNews = local.getNews()
+                if (cachedNews.isEmpty())
+                    throw e
+                cachedNews
             }
             Result.success(newsList)
         } catch (e: Exception) {

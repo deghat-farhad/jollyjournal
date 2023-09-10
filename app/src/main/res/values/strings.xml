@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">JollyJournal</string>
+    <string name="error_message">can not reach the server, check your Internet connection and try again.</string>
+    <string name="premium">Premium</string>
 </resources>

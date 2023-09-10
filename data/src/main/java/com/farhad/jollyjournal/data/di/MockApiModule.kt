@@ -11,6 +11,7 @@ import dagger.hilt.components.SingletonComponent
 import okhttp3.Interceptor
 import java.util.Scanner
 
+
 @Module
 @InstallIn(SingletonComponent::class)
 class MockApiModule {
@@ -34,7 +35,8 @@ class MockApiModule {
                 stringBuilder.toString()
             },
             200,
-            1500
+            1500,
+            errorFrequencyInPercent = 50,
         )
     }
 }

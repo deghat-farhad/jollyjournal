@@ -27,20 +27,20 @@
   },
   {
     "type": "Video",
-    "imageURL": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/Sintel.jpg",
+    "imageURL": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/Sintel.jpg",
     "headline": "Sintel: A CGI Animated Short Film",
     "videoType": "YouTube",
     "duration": "14:48",
-    "videoURL": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+    "videoURL": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
     "isPaid": false
   },
   {
     "type": "Video",
-    "imageURL": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/VolkswagenGTIReview.jpg",
+    "imageURL": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/VolkswagenGTIReview.jpg",
     "headline": "Volkswagen GTI Review",
     "videoType": "YouTube",
     "duration": "8:02",
-    "videoURL": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4",
+    "videoURL": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4",
     "isPaid": false
   },
   {
@@ -71,11 +71,11 @@
   },
   {
     "type": "Video",
-    "imageURL": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg",
+    "imageURL": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg",
     "headline": "Big Buck Bunny",
     "videoType": "YouTube",
     "duration": "5:30",
-    "videoURL": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "videoURL": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
     "isPaid": false
   },
   {
@@ -93,20 +93,20 @@
   },
   {
     "type": "Video",
-    "imageURL": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerBlazes.jpg",
+    "imageURL": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerBlazes.jpg",
     "headline": "For Bigger Blazes",
     "videoType": "YouTube",
     "duration": "6:15",
-    "videoURL": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    "videoURL": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
     "isPaid": false
   },
   {
     "type": "Video",
-    "imageURL": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg",
+    "imageURL": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg",
     "headline": "Elephant Dream",
     "videoType": "Vimeo",
     "duration": "4:45",
-    "videoURL": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    "videoURL": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
     "isPaid": true
   },
   {
