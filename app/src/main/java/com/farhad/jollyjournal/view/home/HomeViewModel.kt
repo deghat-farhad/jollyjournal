@@ -20,20 +20,21 @@ class HomeViewModel @Inject constructor(
     val state: StateFlow<UiState> = mutableState
 
     fun retry() {
-        viewModelScope.launch {
-            mutableState.value = UiState.Loading
-            try {
-                getNews()
-                    .onSuccess { newsList ->
-                        mutableState.value = UiState.Loaded(newsItemMapper.toPresentation(newsList))
-                    }
-                    .onFailure {
-                        mutableState.value = UiState.Error
-                    }
-            } catch (e: Exception) {
-                mutableState.value = UiState.Error
+        if (state.value !is UiState.Loaded)
+            viewModelScope.launch {
+                mutableState.value = UiState.Loading
+                try {
+                    getNews()
+                        .onSuccess { newsList ->
+                            mutableState.value = UiState.Loaded(newsItemMapper.toPresentation(newsList))
+                        }
+                        .onFailure {
+                            mutableState.value = UiState.Error
+                        }
+                } catch (e: Exception) {
+                    mutableState.value = UiState.Error
+                }
             }
-        }
     }
 
     sealed class UiState {
