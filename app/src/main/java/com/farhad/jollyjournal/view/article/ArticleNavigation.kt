@@ -29,6 +29,7 @@ fun NavGraphBuilder.article(
     ) {
         ArticleRoute(
             viewModel = hiltViewModel(),
+            popBack = navController::popBackStack
         )
     }
 }

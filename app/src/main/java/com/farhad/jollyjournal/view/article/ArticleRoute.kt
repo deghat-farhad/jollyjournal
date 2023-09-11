@@ -7,7 +7,8 @@ import androidx.compose.runtime.getValue
 @Composable
 fun ArticleRoute(
     viewModel: ArticleViewModel,
+    popBack: () -> Unit
 ) {
     val uiState by viewModel.state.collectAsState()
-    ArticleScreen(uiState)
+    ArticleScreen(uiState, popBack)
 }

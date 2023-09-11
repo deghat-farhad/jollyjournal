@@ -19,9 +19,9 @@ import coil.compose.AsyncImage
 import com.farhad.jollyjournal.com.farhad.jollyjournal.view.common.ErrorScreen
 
 @Composable
-fun ArticleScreen(uiState: ArticleViewModel.UiState) = when (uiState) {
+fun ArticleScreen(uiState: ArticleViewModel.UiState, popBack: () -> Unit) = when (uiState) {
     ArticleViewModel.UiState.Error -> {
-        ErrorScreen()
+        ErrorScreen(retry = popBack)
     }
 
     is ArticleViewModel.UiState.Loaded -> {

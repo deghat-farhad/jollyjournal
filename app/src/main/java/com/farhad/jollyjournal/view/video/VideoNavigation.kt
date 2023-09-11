@@ -27,8 +27,9 @@ fun NavGraphBuilder.video(
             }
         )
     ) {
-        Video(
-            viewModel = hiltViewModel()
+        VideoRoute(
+            viewModel = hiltViewModel(),
+            popBack = navController::popBackStack,
         )
     }
 }

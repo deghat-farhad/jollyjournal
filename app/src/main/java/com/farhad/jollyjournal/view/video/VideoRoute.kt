@@ -5,9 +5,10 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 
 @Composable
-fun Video(
-    viewModel: VideoViewModel
+fun VideoRoute(
+    viewModel: VideoViewModel,
+    popBack: () -> Unit
 ) {
     val uiState by viewModel.state.collectAsState()
-    VideoScreen(uiState)
+    VideoScreen(uiState, popBack)
 }
