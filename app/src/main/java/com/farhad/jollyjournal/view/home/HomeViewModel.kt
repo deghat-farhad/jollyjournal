@@ -19,10 +19,6 @@ class HomeViewModel @Inject constructor(
     private val mutableState: MutableStateFlow<UiState> = MutableStateFlow(UiState.Loading)
     val state: StateFlow<UiState> = mutableState
 
-    init {
-        retry()
-    }
-
     fun retry() {
         viewModelScope.launch {
             mutableState.value = UiState.Loading

@@ -21,7 +21,6 @@ class Cache @Inject constructor(
                     local.storeNews(newsList)
                 }
             } catch (e: Exception) {
-                Log.w(TAG, "API call failed, fall back to local cache: $e")
                 val cachedNews = local.getNews()
                 if (cachedNews.isEmpty())
                     throw e

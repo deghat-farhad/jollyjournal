@@ -68,6 +68,14 @@ dependencies {
 
     implementation("io.coil-kt:coil-compose:2.4.0")
 
+    // required if you want to use Mockito for unit tests
+    testImplementation ("org.mockito:mockito-core:5.5.0")
+    testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-common:1.9.10")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-annotations-common:1.8.20")
+    testImplementation("org.testng:testng:6.9.6")
+    testImplementation("app.cash.turbine:turbine:1.0.0")
+
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
     implementation("androidx.activity:activity-compose:1.7.2")

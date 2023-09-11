@@ -9,7 +9,7 @@ plugins {
 
 android {
     namespace = "com.farhad.jollyjournal.data"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 24
@@ -55,6 +55,13 @@ dependencies {
     // Room
     implementation("androidx.room:room-ktx:2.5.2")
     ksp("androidx.room:room-compiler:2.5.2")
+
+    // required if you want to use Mockito for unit tests
+    testImplementation ("org.mockito:mockito-core:5.5.0")
+    testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-common:1.9.10")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-annotations-common:1.8.20")
+    testImplementation("org.testng:testng:6.9.6")
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

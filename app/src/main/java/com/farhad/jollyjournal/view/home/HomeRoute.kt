@@ -1,6 +1,7 @@
 package com.farhad.jollyjournal.com.farhad.jollyjournal.view.home
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import com.farhad.jollyjournal.com.farhad.jollyjournal.item.NewsItem
@@ -13,6 +14,9 @@ fun HomeRoute(
     navigateToArticle: (article: NewsItem.Article) -> Unit,
 ) {
     val uiState by viewModel.state.collectAsState()
+    LaunchedEffect(viewModel) {
+        viewModel.retry()
+    }
     HomeScreen(
         uiState = uiState,
         retry = viewModel::retry,
