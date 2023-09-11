@@ -39,34 +39,18 @@ android {
 dependencies {
     implementation(project(":domain"))
 
-    implementation("com.google.dagger:hilt-android:2.44")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    implementation(Hilt.hiltAndroid)
+    kapt(Hilt.hiltCompiler)
 
-    // Retrofit, Gson, and OkHttp
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.okhttp3:okhttp:4.11.0")
-    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:1.0.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
+    implementation(Network.retrofit)
+    implementation(Network.okhttp)
+    implementation(Network.retrofitSerialization)
+    implementation(Dependencies.kotlinSerializationJson)
 
+    implementation(Room.room)
+    ksp(Room.roomCompiler)
 
-    // OkHttp MockWebServer for mocking the server
-    implementation("com.squareup.okhttp3:mockwebserver:4.11.0")
-
-    // Room
-    implementation("androidx.room:room-ktx:2.5.2")
-    ksp("androidx.room:room-compiler:2.5.2")
-
-    // required if you want to use Mockito for unit tests
-    testImplementation ("org.mockito:mockito-core:5.5.0")
-    testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-common:1.9.10")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-annotations-common:1.8.20")
-    testImplementation("org.testng:testng:6.9.6")
-
-    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.9.0")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    testImplementation (Test.mockito)
+    testImplementation (Test.coroutineTest)
+    testImplementation(Test.junit)
 }
