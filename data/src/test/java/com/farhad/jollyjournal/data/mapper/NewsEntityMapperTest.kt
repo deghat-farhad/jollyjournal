@@ -7,7 +7,6 @@ import com.farhad.jollyjournal.domain.model.NewsType
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
-import org.mockito.MockitoAnnotations
 
 class NewsEntityMapperTest {
     private lateinit var newsEntityMapper: NewsEntityMapper

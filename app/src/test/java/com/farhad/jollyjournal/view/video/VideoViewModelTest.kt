@@ -23,6 +23,7 @@ class VideoViewModelTest {
     fun setUp() {
         MockitoAnnotations.openMocks(this)
     }
+
     @Test
     fun initialStateShouldBeLoadedWithArticle() {
         val dummyVideo = NewsItem.Video(

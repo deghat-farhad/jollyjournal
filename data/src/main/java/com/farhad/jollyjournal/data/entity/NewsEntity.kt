@@ -5,7 +5,7 @@ import com.farhad.jollyjournal.data.utils.NewsEntityTypeSerializer
 import kotlinx.serialization.Serializable
 
 @Serializable(with = NewsDeserializer::class)
-sealed class NewsEntity{
+sealed class NewsEntity {
     @Serializable
     data class Article(
         val type: NewsEntityType,

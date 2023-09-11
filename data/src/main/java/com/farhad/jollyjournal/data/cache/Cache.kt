@@ -1,6 +1,5 @@
 package com.farhad.jollyjournal.data.cache
 
-import android.util.Log
 import com.farhad.jollyjournal.data.local.Local
 import com.farhad.jollyjournal.data.remote.Remote
 import com.farhad.jollyjournal.domain.model.News

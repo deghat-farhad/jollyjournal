@@ -93,7 +93,7 @@ class MockNetworkInterceptor @Inject constructor() : Interceptor {
         status: Int,
         delayInMs: Long = 250,
         persist: Boolean = true,
-        errorFrequencyInPercent:Int = 0
+        errorFrequencyInPercent: Int = 0
     ) = apply {
         val mockResponse =
             MockResponse(

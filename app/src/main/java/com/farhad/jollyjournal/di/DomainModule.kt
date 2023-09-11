@@ -16,7 +16,7 @@ interface DomainModule {
     @Binds
     fun newsContract(newsRepository: NewsRepository): NewsContract
 
-    companion object{
+    companion object {
         @Provides
         fun getNews(
             newsRepository: NewsContract

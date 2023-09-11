@@ -26,7 +26,8 @@ class HomeViewModel @Inject constructor(
                 try {
                     getNews()
                         .onSuccess { newsList ->
-                            mutableState.value = UiState.Loaded(newsItemMapper.toPresentation(newsList))
+                            mutableState.value =
+                                UiState.Loaded(newsItemMapper.toPresentation(newsList))
                         }
                         .onFailure {
                             mutableState.value = UiState.Error

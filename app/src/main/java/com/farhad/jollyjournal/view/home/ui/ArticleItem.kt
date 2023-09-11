@@ -92,7 +92,9 @@ fun ArticleItem(
                                 modifier = Modifier
                                     .padding(end = 8.dp)
                                     .clickable {
-                                        Toast.makeText(context, hashtag,Toast.LENGTH_SHORT).show()
+                                        Toast
+                                            .makeText(context, hashtag, Toast.LENGTH_SHORT)
+                                            .show()
                                     }
                             )
                         }

@@ -6,7 +6,6 @@ import com.farhad.jollyjournal.data.mapper.NewsRoomEntityMapper
 import com.farhad.jollyjournal.domain.model.News
 import com.farhad.jollyjournal.domain.model.NewsType
 import junit.framework.TestCase.assertEquals
-import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Test

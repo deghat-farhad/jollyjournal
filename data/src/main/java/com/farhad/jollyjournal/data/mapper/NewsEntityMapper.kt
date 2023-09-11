@@ -1,8 +1,8 @@
 package com.farhad.jollyjournal.data.mapper
 
+import com.farhad.jollyjournal.data.entity.NewsEntity
 import com.farhad.jollyjournal.domain.model.News
 import com.farhad.jollyjournal.domain.model.NewsType
-import com.farhad.jollyjournal.data.entity.NewsEntity
 import javax.inject.Inject
 
 class NewsEntityMapper @Inject constructor() {

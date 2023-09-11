@@ -6,6 +6,6 @@ import com.farhad.jollyjournal.domain.usecase.base.UseCase
 
 class GetNews(
     private val newsContract: NewsContract
-): UseCase<List<News>> {
+) : UseCase<List<News>> {
     override suspend fun invoke(): Result<List<News>> = newsContract.getNews()
 }

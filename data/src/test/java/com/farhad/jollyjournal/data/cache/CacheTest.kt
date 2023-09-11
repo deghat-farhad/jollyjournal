@@ -1,21 +1,17 @@
 package com.farhad.jollyjournal.data.cache
 
-import androidx.lifecycle.SavedStateHandle
 import com.farhad.jollyjournal.data.local.Local
 import com.farhad.jollyjournal.data.remote.Remote
 import com.farhad.jollyjournal.domain.model.News
 import com.farhad.jollyjournal.domain.model.NewsType
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
-import org.junit.Before
 import org.junit.Test
-import org.mockito.Mock
 import org.mockito.Mockito.anyList
 import org.mockito.Mockito.mock
 import org.mockito.Mockito.times
 import org.mockito.Mockito.verify
 import org.mockito.Mockito.`when`
-import org.mockito.MockitoAnnotations
 
 
 class CacheTest {

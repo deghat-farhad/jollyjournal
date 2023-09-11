@@ -50,7 +50,7 @@ dependencies {
     implementation(Room.room)
     ksp(Room.roomCompiler)
 
-    testImplementation (Test.mockito)
-    testImplementation (Test.coroutineTest)
+    testImplementation(Test.mockito)
+    testImplementation(Test.coroutineTest)
     testImplementation(Test.junit)
 }

@@ -1,7 +1,7 @@
 package com.farhad.jollyjournal.data.remote
 
-import com.farhad.jollyjournal.domain.model.News
 import com.farhad.jollyjournal.data.mapper.NewsEntityMapper
+import com.farhad.jollyjournal.domain.model.News
 import javax.inject.Inject
 
 class Remote @Inject constructor(

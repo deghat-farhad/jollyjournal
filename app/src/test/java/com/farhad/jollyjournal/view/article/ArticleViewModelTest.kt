@@ -22,6 +22,7 @@ class ArticleViewModelTest {
     fun setUp() {
         MockitoAnnotations.openMocks(this)
     }
+
     @Test
     fun initialStateShouldBeLoadedWithArticle() {
         val dummyArticle = NewsItem.Article(

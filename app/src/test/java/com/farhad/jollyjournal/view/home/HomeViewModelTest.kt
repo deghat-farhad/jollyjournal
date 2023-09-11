@@ -44,7 +44,7 @@ class HomeViewModelTest {
     }
 
     @Test
-    fun testRetrySuccessState() = runTest{//(UnconfinedTestDispatcher()) {
+    fun testRetrySuccessState() = runTest {//(UnconfinedTestDispatcher()) {
         val mockNewsList = listOf(dummyArticle, dummyVideo)
         val mockNewsItems = listOf(dummyArticleItem, dummyVideoItem)
 
@@ -60,6 +60,7 @@ class HomeViewModelTest {
         }
         job.cancel()
     }
+
     @Test
     fun testRetryErrorState() = runTest {
         `when`(getNews()).thenReturn(Result.failure(RuntimeException()))

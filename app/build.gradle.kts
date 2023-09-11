@@ -65,8 +65,8 @@ dependencies {
     implementation(platform(Dependencies.composeBom))
     implementation(Dependencies.material3)
 
-    testImplementation (Test.mockito)
-    testImplementation (Test.coroutineTest)
+    testImplementation(Test.mockito)
+    testImplementation(Test.coroutineTest)
     testImplementation(Test.turbine)
     testImplementation(Test.junit)
 }
